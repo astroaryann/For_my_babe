@@ -1,0 +1,249 @@
+/* --- Global Styles & Variables --- */
+:root {
+    --bg-color: #fff0f5; /* Lavender Blush */
+    --primary-pink: #f8c9d4;
+    --accent-red: #e74c3c;
+    --text-color: #333;
+    --light-white: #fdfdfd;
+    --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    --font-heading: 'Dancing Script', cursive;
+    --font-body: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-image: linear-gradient(135deg, var(--bg-color) 0%, #ffffff 100%);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+}
+
+h1, h2 {
+    font-family: var(--font-heading);
+    color: var(--accent-red);
+}
+
+.card {
+    background: var(--light-white);
+    border-radius: 15px;
+    padding: 30px;
+    margin: 30px 0;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* --- Hero Section & Animations --- */
+.hero {
+    padding: 40px 20px;
+    position: relative;
+}
+
+.animated-text h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+    animation: fadeInDown 1s ease-out;
+}
+
+.animated-text p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-pink);
+    animation: fadeInUp 1s 0.5s ease-out backwards;
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Heart Animation --- */
+.heart {
+    width: 100px;
+    height: 90px;
+    position: relative;
+    margin: 30px auto;
+    animation: pulse 1.5s infinite;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: var(--accent-red);
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+
+.heart::after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* --- Letter Section --- */
+#letter h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+#letter p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: left;
+}
+
+/* --- Surprise Button Section --- */
+#surprise h2 {
+    font-size: 2.5rem;
+}
+#surprise p {
+    margin: 15px 0;
+    font-size: 1.1rem;
+}
+#surprise-btn {
+    background-color: var(--accent-red);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 10px rgba(231, 76, 60, 0.4);
+}
+#surprise-btn:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+.surprise-box {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    background: var(--bg-color);
+    border: 2px dashed var(--primary-pink);
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--accent-red);
+}
+
+/* --- Slideshow Section --- */
+#slideshow-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+.slideshow {
+    position: relative;
+    margin: auto;
+    max-width: 600px;
+}
+.slide {
+    display: none;
+}
+.slide img {
+    width: 100%;
+    border-radius: 10px;
+}
+.slide .text {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    font-weight: 600;
+}
+.message-slide {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    color: var(--accent-red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px; /* Match typical image height */
+    padding: 20px;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0,0,0,0.3);
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+    from { opacity: .4 } 
+    to { opacity: 1 }
+}
+
+/* --- Footer --- */
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    color: var(--primary-pink);
+    font-weight: 600;
+}
+
+/* --- Mobile Friendliness --- */
+@media (max-width: 600px) {
+    .animated-text h1 { font-size: 2.5rem; }
+    .animated-text p { font-size: 1rem; }
+    .card { padding: 20px; }
+    #letter h2, #surprise h2, #slideshow-container h2 { font-size: 2rem; }
+    .message-slide { font-size: 1.8rem; height: 300px; }
+}
