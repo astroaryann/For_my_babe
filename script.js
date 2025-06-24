@@ -6,15 +6,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // EDIT HERE: Add your cute compliments or messages
     const compliments = [
-        "You have the most beautiful smile! 😊",
-        "You're smarter than you know.",
+        "Vaidehi, you're the peace in my chaos and the love I never knew I deserved.",
+        "Mera chotu sa baby, you're small in size but you carry the biggest part of my heart",
         "I love the way you laugh.",
-        "You make me a better person.",
+        "Baby, you’re not just beautiful—you’re the reason beauty exists in my life.",
         "You are absolutely perfect to me. ❤️",
-        "Spending time with you is my favorite thing to do.",
-        "Your kindness is a balm to everyone you meet.",
-        "You have the most captivating eyes. ✨",
-        "Just thinking about you makes me smile.",
+        "If sweetness had a name, it would be Vaidehi.",
+        "You must be magic, because every moment with you feels unreal.",
+        "You're so cute, even mirrors get jealous of your reflection",
+        "Every little thing you do makes me fall deeper in love with you.",
         "You're my everything. 💖"
     ];
 
