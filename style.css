@@ -247,3 +247,51 @@ footer {
     #letter h2, #surprise h2, #slideshow-container h2 { font-size: 2rem; }
     .message-slide { font-size: 1.8rem; height: 300px; }
 }
+/* ======================================= */
+/* ===  BACKGROUND PHOTO DECORATION  === */
+/* ======================================= */
+
+/* First, prepare the body to be a container for our background layer */
+body {
+  position: relative; /* This is essential for the effect to work */
+  overflow-x: hidden; /* Hides parts of the background that spill sideways */
+}
+
+/* This is the magic layer that holds and rotates the photos */
+body::before {
+  content: ''; /* This is required for pseudo-elements */
+  position: absolute; /* Positions it relative to the body */
+  z-index: -1; /* Pushes it BEHIND all your text content */
+
+  /* Make it bigger than the screen so it covers everything when rotated */
+  width: 140%;
+  height: 140%;
+  top: -20%;
+  left: -20%;
+  
+  /* --- This is where you set the angle --- */
+  transform: rotate(-10deg); /* Change -10deg to whatever angle you like! */
+  
+  /* --- IMPORTANT: Add your photo paths here! --- */
+  background-image: 
+    url("images/gf-photo1.jpg"),
+    url("images/gf-photo2.jpg"),
+    url("images/gf-photo3.jpg"),
+    url("images/gf-photo1.jpg"); /* You can repeat images! */
+    
+  background-repeat: no-repeat;
+  
+  /* --- Control the size of the photos --- */
+  background-size: 200px; /* All photos will be 200px wide. Adjust as needed. */
+
+  /* --- Manually place the photos for a "random" look --- */
+  /* Each "X% Y%" pair corresponds to an image in the list above */
+  background-position:
+    10% 20%,   /* Position for the 1st photo */
+    85% 35%,   /* Position for the 2nd photo */
+    30% 70%,   /* Position for the 3rd photo */
+    60% 90%;   /* Position for the 4th photo (the repeated one) */
+    
+  /* Optional: Make the photos slightly transparent */
+  opacity: 0.3; /* A value from 0 (invisible) to 1 (fully visible) */
+}
