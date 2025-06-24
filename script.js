@@ -8,12 +8,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const compliments = [
         "Vaidehi, you're the peace in my chaos and the love I never knew I deserved.",
         "Mera chotu sa baby, you're small in size but you carry the biggest part of my heart",
-        "I love the way you laugh.",
+        "Vaidehi, my chotu sa baby, every time I look at you, I wonder how someone so perfect, so precious, became mine",
         "Baby, you’re not just beautiful—you’re the reason beauty exists in my life.",
         "You are absolutely perfect to me. ❤️",
         "If sweetness had a name, it would be Vaidehi.",
-        "You must be magic, because every moment with you feels unreal.",
-        "You're so cute, even mirrors get jealous of your reflection",
+        "My chotu sa baby Vaidehi, you are the sweetest part of my life, and loving you is the easiest thing I've ever done",
+        "Vaidehi, mera baccha, the way you laugh, the way you talk, even the way you get annoyed — it all makes me fall for you more every single day.",
         "Every little thing you do makes me fall deeper in love with you.",
         "You're my everything. 💖"
     ];
